@@ -55,23 +55,25 @@
             </p>
 
 
-            <button
-                type="button"
-                class="account-card"
-                data-account="asthila"
-            >
+            <button 
+    type="button" 
+    class="account-card" 
+    data-account="asthila" 
+>
+    <div class="account-avatar asthila">
+        A
+    </div>
 
-                <div class="account-avatar asthila">
-                    A
-                </div>
+    <div class="account-text">
+        <strong>
+            Asthila Ayu Khinanthi
+        </strong>
+    </div>
 
-                <div class="account-text">
-
-    <strong>
-        Asthila Ayu Khinanthi
-    </strong>
-
-</div>
+    <div class="account-arrow">
+        →
+    </div>
+</button>
 
                 <div class="account-arrow">
                     →
@@ -80,24 +82,25 @@
             </button>
 
 
-            <button
-                type="button"
-                class="account-card"
-                data-account="dicky"
-            >
+            <button 
+    type="button" 
+    class="account-card" 
+    data-account="dicky" 
+>
+    <div class="account-avatar dicky">
+        D
+    </div>
 
-                <div class="account-avatar dicky">
-                    D
-                </div>
+    <div class="account-text">
+        <strong>
+            Dicky Prasetyo
+        </strong>
+    </div>
 
-              <div class="account-text">
-
-    <strong>
-        Dicky Prasetyo
-    </strong>
-
-</div>
-
+    <div class="account-arrow">
+        →
+    </div>
+</button>
                 <div class="account-arrow">
                     →
                 </div>
@@ -135,9 +138,7 @@
                 Asthila Ayu khinanthi
             </h2>
 
-            <p id="selectedRole">
-                Pacar
-            </p>
+        
 
 
             <!-- PIN DOT -->
@@ -708,7 +709,7 @@
                             </strong>
 
                             <span>
-                                Pacar ♡
+                                 ♡
                             </span>
 
                         </div>
@@ -893,23 +894,6 @@
     </div>
 
 </div>
-
-
-                    <div class="chart-legend">
-
-                        <span>
-                            <i class="legend-dot income"></i>
-                            Masuk
-                        </span>
-
-                        <span>
-                            <i class="legend-dot expense"></i>
-                            Keluar
-                        </span>
-
-                    </div>
-
-                </div>
 
 
                 <div
@@ -1248,70 +1232,50 @@
             </div>
 
 
-            <!-- PROOF -->
+          <!-- PROOF TRANSAKSI -->
 
-            <div class="form-group">
+<div
+    id="proofGroup"
+    class="form-group"
+>
 
-                <label for="proofInput">
-                    Bukti transaksi
-                    <span>
-                        (opsional)
-                    </span>
-                </label>
+    <label for="proofInput">
+        Bukti transaksi
+        <span>(opsional)</span>
+    </label>
 
-                <label
-                    for="proofInput"
-                    class="proof-upload"
-                >
+    <label
+        for="proofInput"
+        class="proof-upload"
+    >
 
-                    <span class="proof-upload-icon">
-                        📎
-                    </span>
+        <span class="proof-upload-icon">
+            📎
+        </span>
 
-                    <strong>
-                        Pilih bukti transaksi
-                    </strong>
+        <strong>
+            Pilih bukti transaksi
+        </strong>
 
-                    <small>
-                        JPG, PNG, PDF, atau dokumen lainnya
-                    </small>
+        <small>
+            JPG, PNG, PDF, atau dokumen lainnya
+        </small>
 
-                </label>
+    </label>
 
+    <input
+        type="file"
+        id="proofInput"
+        accept="image/*,.pdf,.doc,.docx"
+        hidden
+    >
 
-                <input
-                    type="file"
-                    id="proofInput"
-                    accept="image/*,.pdf,.doc,.docx"
-                    hidden
-                >
-
-
-                <div
-                    id="proofPreview"
-                    class="proof-preview"
-                >
-                </div>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="modal-submit"
-            >
-                Lanjutkan
-                <span>
-                    →
-                </span>
-            </button>
-
-        </form>
-
-    </div>
+    <div
+        id="proofPreview"
+        class="proof-preview"
+    ></div>
 
 </div>
-
 
 
 <!-- =====================================================
