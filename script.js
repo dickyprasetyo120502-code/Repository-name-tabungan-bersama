@@ -13,11 +13,10 @@ const TARGET_NIKAH = 120000000;
 const ACCOUNTS = {
 
     asthila: {
-        name: "Asthila Ayu khinanthi",
+        name: "Asthila Ayu Khinanthi",
         shortName: "Asthila",
         initial: "A",
         pin: "081203",
-        
     },
 
     dicky: {
@@ -25,7 +24,6 @@ const ACCOUNTS = {
         shortName: "Dicky",
         initial: "D",
         pin: "120502",
-        
     }
 
 };
@@ -56,7 +54,6 @@ let transactions = JSON.parse(
     )
 ) || [];
 
-
 /* =========================================================
    DOM
 ========================================================= */
@@ -76,8 +73,6 @@ const pinSection =
 const selectedName =
     document.getElementById("selectedName");
 
-const selectedRole =
-    document.getElementById("selectedRole");
 
 const selectedInitial =
     document.getElementById("selectedInitial");
@@ -288,36 +283,24 @@ function saveTransactions() {
 
 function selectAccount(accountKey) {
 
-    const account =
-        ACCOUNTS[accountKey];
+    const account = ACCOUNTS[accountKey];
 
     if (!account) return;
 
-    selectedAccount =
-        accountKey;
+    selectedAccount = accountKey;
 
-    accountList.classList.add(
-        "hidden"
-    );
+    accountList.classList.add("hidden");
 
-    pinSection.classList.remove(
-        "hidden"
-    );
+    pinSection.classList.remove("hidden");
 
-    selectedName.textContent =
-        account.name;
+    selectedName.textContent = account.name;
 
-    selectedRole.textContent =
-        account.type;
-
-    selectedInitial.textContent =
-        account.initial;
+    selectedInitial.textContent = account.initial;
 
     selectedInitial.className =
         `profile-avatar ${accountKey}`;
 
     resetPin();
-
 }
 
 
@@ -380,67 +363,60 @@ function resetPin() {
 /* =========================================================
    CHECK PIN
 ========================================================= */
+async function checkPin() {
+    if (!selectedAccount) return;
 
-function checkPin() {
+    const account = ACCOUNTS[selectedAccount];
 
-    if (!selectedAccount) {
+    const { data, error } = await window.supabaseClient
+        .from("users")
+        .select("id, name, pin")
+        .eq("name", account.name)
+        .eq("pin", String(enteredPin))
+        .maybeSingle();
+
+    console.log("Login data:", data);
+    console.log("Login error:", error);
+
+    if (error) {
+        console.error("Gagal mengecek PIN:", error);
+
+        pinHint.textContent =
+            "Gagal terhubung ke database.";
+        pinHint.classList.add("error");
         return;
     }
 
-    const account =
-        ACCOUNTS[selectedAccount];
-
-
-    if (
-        enteredPin ===
-        account.pin
-    ) {
-
-        pinHint.textContent =
-            "PIN benar ♡";
-
-        setTimeout(
-            () => {
-
-                currentUser =
-                    selectedAccount;
-
-                sessionStorage.setItem(
-                    "ourLittleFundUser",
-                    selectedAccount
-                );
-
-                showDashboard();
-
-            },
-            250
-        );
-
-
-    } else {
-
+    if (!data) {
         pinHint.textContent =
             "PIN salah, coba lagi ♡";
+        pinHint.classList.add("error");
 
-        pinHint.classList.add(
-            "error"
-        );
+        setTimeout(() => {
+            resetPin();
+        }, 700);
 
-
-        setTimeout(
-            () => {
-
-                resetPin();
-
-            },
-            700
-        );
-
+        return;
     }
 
+    pinHint.textContent = "PIN benar ♡";
+
+    currentUser = selectedAccount;
+
+    sessionStorage.setItem(
+        "ourLittleFundUser",
+        selectedAccount
+    );
+
+    sessionStorage.setItem(
+        "ourLittleFundUserId",
+        data.id
+    );
+
+    setTimeout(() => {
+        showDashboard();
+    }, 250);
 }
-
-
 /* =========================================================
    KEYPAD
 ========================================================= */
@@ -587,8 +563,9 @@ function showDashboard() {
     currentUserName.textContent =
         account.shortName;
 
-    currentUserRole.textContent =
-        account.type;
+        currentUserRole.textContent =
+    "Kamu";
+
 
     currentUserAvatar.textContent =
         account.initial;
