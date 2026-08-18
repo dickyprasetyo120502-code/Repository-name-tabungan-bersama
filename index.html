@@ -1070,7 +1070,6 @@
 
     <div class="modal-background"></div>
 
-
     <div class="modal-card">
 
         <button
@@ -1080,16 +1079,13 @@
             ×
         </button>
 
-
         <div class="modal-icon">
             ♡
         </div>
 
-
         <h2 id="modalTitle">
             Tambah Tabungan
         </h2>
-
 
         <p id="modalDescription">
             Catat uang yang kamu masukkan
@@ -1097,44 +1093,63 @@
         </p>
 
 
+        <!-- FORM -->
         <form id="transactionForm">
 
-    <!-- REKENING TABUNGAN -->
-    <div id="bankInfo" class="bank-info">
 
-        <div class="bank-info-header">
-            <div>
-                <span class="bank-label">TRANSFER KE</span>
-                <strong>BCA Syariah</strong>
-            </div>
-        </div>
+            <!-- REKENING TABUNGAN -->
 
-        <div class="bank-owner">
-            ASTHILA AYU KHINANTHI
-        </div>
-
-        <div class="bank-number-row">
-
-            <strong id="bankAccountNumber">
-                0080011398
-            </strong>
-
-            <button
-                type="button"
-                id="copyBankButton"
-                class="copy-bank-button"
+            <div
+                id="bankInfo"
+                class="bank-info"
             >
-                Salin
-            </button>
 
-        </div>
+                <div class="bank-info-header">
 
-        <span
-            id="copyBankMessage"
-            class="copy-bank-message"
-        ></span>
+                    <div>
 
-    </div>
+                        <span class="bank-label">
+                            TRANSFER KE
+                        </span>
+
+                        <strong>
+                            BCA Syariah
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bank-owner">
+                    ASTHILA AYU KHINANTHI
+                </div>
+
+
+                <div class="bank-number-row">
+
+                    <strong id="bankAccountNumber">
+                        0080011398
+                    </strong>
+
+                    <button
+                        type="button"
+                        id="copyBankButton"
+                        class="copy-bank-button"
+                    >
+                        Salin
+                    </button>
+
+                </div>
+
+
+                <span
+                    id="copyBankMessage"
+                    class="copy-bank-message"
+                ></span>
+
+            </div>
+
 
             <!-- TYPE -->
 
@@ -1165,6 +1180,7 @@
                         placeholder="0"
                         inputmode="numeric"
                         autocomplete="off"
+                        required
                     >
 
                 </div>
@@ -1182,6 +1198,7 @@
 
                 <select
                     id="categoryInput"
+                    required
                 >
 
                     <option value="Tabungan">
@@ -1226,50 +1243,78 @@
             </div>
 
 
-          <!-- PROOF TRANSAKSI -->
+            <!-- PROOF TRANSAKSI -->
 
-<div
-    id="proofGroup"
-    class="form-group"
->
+            <div
+                id="proofGroup"
+                class="form-group"
+            >
 
-    <label for="proofInput">
-        Bukti transaksi
-        <span>(opsional)</span>
-    </label>
+                <label for="proofInput">
 
-    <label
-        for="proofInput"
-        class="proof-upload"
-    >
+                    Bukti transaksi
 
-        <span class="proof-upload-icon">
-            📎
-        </span>
+                    <span>
+                        (opsional)
+                    </span>
 
-        <strong>
-            Pilih bukti transaksi
-        </strong>
+                </label>
 
-        <small>
-            JPG, PNG, PDF, atau dokumen lainnya
-        </small>
 
-    </label>
+                <label
+                    for="proofInput"
+                    class="proof-upload"
+                >
 
-    <input
-        type="file"
-        id="proofInput"
-        accept="image/*,.pdf,.doc,.docx"
-        hidden
-    >
+                    <span class="proof-upload-icon">
+                        📎
+                    </span>
 
-    <div
-        id="proofPreview"
-        class="proof-preview"
-    ></div>
+                    <strong>
+                        Pilih bukti transaksi
+                    </strong>
+
+                    <small>
+                        JPG, PNG, PDF, atau dokumen lainnya
+                    </small>
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="proofInput"
+                    accept="image/*,.pdf,.doc,.docx"
+                    hidden
+                >
+
+
+                <div
+                    id="proofPreview"
+                    class="proof-preview"
+                ></div>
+
+            </div>
+
+
+            <!-- TOMBOL LANJUT -->
+
+            <button
+                type="submit"
+                class="confirm-ok"
+            >
+                Lanjutkan ♡
+            </button>
+
+
+        </form>
+        <!-- FORM SELESAI -->
+
+
+    </div>
 
 </div>
+
 
 
 <!-- =====================================================
@@ -1286,9 +1331,17 @@
 
     <div class="modal-card confirm-card">
 
-       <div class="confirm-icon">
-    ♡
-</div>
+        <button
+            type="button"
+            class="modal-close close-modal"
+        >
+            ×
+        </button>
+
+
+        <div class="confirm-icon">
+            ♡
+        </div>
 
 
         <h2>
@@ -1304,16 +1357,13 @@
 
         <div class="confirm-detail">
 
-
             <div>
 
                 <span>
                     Nominal
                 </span>
 
-                <strong
-                    id="confirmAmount"
-                >
+                <strong id="confirmAmount">
                     Rp0
                 </strong>
 
@@ -1326,9 +1376,7 @@
                     Jenis
                 </span>
 
-                <strong
-                    id="confirmType"
-                >
+                <strong id="confirmType">
                     Menambah tabungan
                 </strong>
 
@@ -1341,9 +1389,7 @@
                     Kategori
                 </span>
 
-                <strong
-                    id="confirmCategory"
-                >
+                <strong id="confirmCategory">
                     Tabungan
                 </strong>
 
@@ -1356,9 +1402,7 @@
                     Atas nama
                 </span>
 
-                <strong
-                    id="confirmUser"
-                >
+                <strong id="confirmUser">
                     Dicky Prasetyo
                 </strong>
 
@@ -1371,9 +1415,7 @@
                     Catatan
                 </span>
 
-                <strong
-                    id="confirmNote"
-                >
+                <strong id="confirmNote">
                     -
                 </strong>
 
@@ -1407,16 +1449,15 @@
 
 </div>
 
+
+
 <!-- =====================================================
      SUPABASE
 ===================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase.js"></script>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<script src="supabase.js"></script>
 
 <script src="script.js"></script>
 

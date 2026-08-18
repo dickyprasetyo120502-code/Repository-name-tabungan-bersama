@@ -899,17 +899,19 @@ function updateDashboard() {
     renderAchievements();
 
 }
-
-
 /* =========================================================
-   OPEN ADD
+   OPEN ADD MONEY
 ========================================================= */
 
 if (addMoneyButton) {
 
     addMoneyButton.addEventListener(
         "click",
-        openAddMoney
+        function () {
+
+            openAddMoney();
+
+        }
     );
 
 }
@@ -917,17 +919,21 @@ if (addMoneyButton) {
 
 function openAddMoney() {
 
-    transactionType.value =
-        "income";
+    // Jenis transaksi
+    transactionType.value = "income";
 
+    // Judul modal
     modalTitle.textContent =
         "Tambah Tabungan";
 
+    // Deskripsi
     modalDescription.textContent =
         "Catat uang yang kamu masukkan ke tabungan nikah.";
 
+    // Tampilkan rekening BCA Syariah
     bankInfo.classList.remove("hidden");
 
+    // Kategori pemasukan
     categoryInput.innerHTML = `
 
         <option value="Tabungan">
@@ -952,9 +958,11 @@ function openAddMoney() {
 
     `;
 
+    // Buka modal
     openTransactionModal();
 
 }
+
 
 /* =========================================================
    OPEN SPEND
