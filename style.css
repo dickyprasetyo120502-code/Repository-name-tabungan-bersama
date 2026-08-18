@@ -4324,4 +4324,15 @@ button {
     border: none;
     cursor: pointer;
     font-family: inherit;
+}/* TOMBOL LANJUTKAN */
+
+#transactionForm .confirm-ok {
+    display: block;
+    width: 160px;
+    margin: 20px auto 4px;
+    padding: 11px 18px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
