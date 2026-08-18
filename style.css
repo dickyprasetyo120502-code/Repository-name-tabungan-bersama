@@ -3798,4 +3798,515 @@ button {
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
+} /* =====================================================
+   LOGIN PAGE - MODERN ROMANTIC
+===================================================== */
+
+.login-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255, 182, 193, 0.28), transparent 30%),
+        radial-gradient(circle at 85% 85%, rgba(214, 164, 255, 0.22), transparent 30%),
+        linear-gradient(135deg, #fff7fa 0%, #fdf0f5 50%, #f8f0ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* dekorasi background */
+
+.login-page::before {
+    content: "♡";
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    font-size: 90px;
+    color: rgba(190, 110, 145, 0.08);
+    transform: rotate(-15deg);
+}
+
+.login-page::after {
+    content: "♡";
+    position: absolute;
+    bottom: 8%;
+    right: 10%;
+    font-size: 120px;
+    color: rgba(150, 100, 180, 0.07);
+    transform: rotate(15deg);
+}
+
+
+/* =====================================================
+   LOGIN CARD
+===================================================== */
+
+.login-card {
+    width: min(100%, 440px);
+    padding: 42px 34px 38px;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 30px 80px rgba(105, 55, 80, 0.14),
+        0 8px 25px rgba(105, 55, 80, 0.07);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   LOVE ICON
+===================================================== */
+
+.login-love {
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #f7d5df,
+        #ead9f8
+    );
+
+    color: #a75d7c;
+    font-size: 32px;
+
+    box-shadow:
+        0 12px 30px rgba(170, 100, 140, 0.16);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.login-card > h1 {
+    margin: 0;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    color: #382733;
+    letter-spacing: -0.6px;
+}
+
+.login-subtitle {
+    margin: 10px 0 30px;
+
+    text-align: center;
+
+    color: #8b7883;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ACCOUNT SECTION
+===================================================== */
+
+.account-section h2 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #493542;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.section-description {
+    margin: 7px 0 20px;
+
+    text-align: center;
+
+    color: #9b8992;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ACCOUNT CARD
+===================================================== */
+
+.account-card {
+    width: 100%;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 12px;
+    padding: 12px 15px;
+
+    border: 1px solid #f0e2e8;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.account-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #e4b9ca;
+
+    background: #fffafd;
+
+    box-shadow:
+        0 12px 30px rgba(150, 80, 110, 0.12);
+}
+
+.account-card:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.account-avatar {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-avatar.asthila {
+    background: linear-gradient(
+        135deg,
+        #f7d7e2,
+        #edc3d3
+    );
+
+    color: #9c5872;
+}
+
+.account-avatar.dicky {
+    background: linear-gradient(
+        135deg,
+        #ddd5f5,
+        #c9b9ec
+    );
+
+    color: #69558f;
+}
+
+
+/* =====================================================
+   ACCOUNT TEXT
+===================================================== */
+
+.account-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.account-text strong {
+    display: block;
+
+    color: #40313a;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.account-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #faf1f5;
+    color: #a76580;
+
+    font-size: 18px;
+
+    transition: 0.2s ease;
+}
+
+.account-card:hover .account-arrow {
+    background: #efd5e0;
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   PIN PAGE
+===================================================== */
+
+.pin-section {
+    text-align: center;
+}
+
+.back-button {
+    display: block;
+
+    margin: 0 0 22px;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: #9a687d;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    color: #75465c;
+}
+
+
+/* PROFILE */
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 23px;
+
+    background: linear-gradient(
+        135deg,
+        #f4d4df,
+        #e8d8f5
+    );
+
+    color: #8f5872;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(150, 90, 120, 0.15);
+}
+
+.pin-section h2 {
+    margin: 0;
+
+    color: #40313a;
+    font-size: 20px;
+}
+
+.pin-section > p {
+    color: #9a8992;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PIN DOTS
+===================================================== */
+
+.pin-wrapper {
+    margin-top: 26px;
+}
+
+.pin-dots {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    margin-bottom: 10px;
+}
+
+.pin-dots span {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #eadfe4;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.pin-dots span.active {
+    background: #b86d89;
+    transform: scale(1.15);
+}
+
+.pin-hint {
+    margin: 0 0 22px;
+
+    color: #a3939b;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   KEYPAD
+===================================================== */
+
+.pin-keypad {
+    width: min(100%, 300px);
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 11px;
+}
+
+.pin-key {
+    height: 58px;
+
+    border: 1px solid #f0e1e7;
+    border-radius: 17px;
+
+    background: #fff;
+
+    color: #4a3741;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(100, 50, 70, 0.06);
+
+    transition: 0.15s ease;
+}
+
+.pin-key:hover {
+    background: #fff7fa;
+    border-color: #e5bdcd;
+}
+
+.pin-key:active {
+    transform: scale(0.94);
+}
+
+.pin-delete {
+    color: #a35e78;
+    background: #fff8fa;
+}
+
+.pin-empty {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.login-error {
+    min-height: 18px;
+    margin-top: 15px !important;
+
+    color: #c05c72 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 32px 20px 28px;
+        border-radius: 26px;
+    }
+
+    .login-love {
+        width: 58px;
+        height: 58px;
+
+        font-size: 28px;
+        border-radius: 19px;
+    }
+
+    .login-card > h1 {
+        font-size: 26px;
+    }
+
+    .account-card {
+        min-height: 72px;
+        padding: 10px 12px;
+        border-radius: 18px;
+    }
+
+    .account-avatar {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        border-radius: 14px;
+    }
+
+    .pin-keypad {
+        gap: 9px;
+    }
+
+    .pin-key {
+        height: 54px;
+        border-radius: 16px;
+    }
 }

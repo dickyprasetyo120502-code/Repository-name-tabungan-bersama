@@ -17,7 +17,7 @@ const ACCOUNTS = {
         shortName: "Asthila",
         initial: "A",
         pin: "081203",
-        type: "Pacar"
+        
     },
 
     dicky: {
@@ -25,7 +25,7 @@ const ACCOUNTS = {
         shortName: "Dicky",
         initial: "D",
         pin: "120502",
-        type: "Kamu"
+        
     }
 
 };
