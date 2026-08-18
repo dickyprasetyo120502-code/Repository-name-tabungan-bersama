@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -10,309 +8,601 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Tabungan Bersama</title>
+    <title>Our Little Fund ♡</title>
 
     <link
         rel="stylesheet"
         href="style.css"
     >
-
 </head>
-
 
 <body>
 
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
 
-<div class="app">
+<div id="loginPage" class="login-page">
+
+    <div class="login-card">
+
+        <div class="login-love">
+            ♡
+        </div>
+
+        <h1>
+            Our Little Fund
+        </h1>
+
+        <p class="login-subtitle">
+            Tabungan kecil untuk masa depan kita
+        </p>
 
 
-    <!-- =====================================================
-         SIDEBAR
-    ====================================================== -->
+        <!-- PILIH AKUN -->
 
-    <aside class="sidebar">
+        <div
+            id="accountList"
+            class="account-section"
+        >
 
+            <h2>
+                Siapa yang masuk?
+            </h2>
+
+            <p class="section-description">
+                Pilih akun kamu terlebih dahulu
+            </p>
+
+
+            <button
+                type="button"
+                class="account-card"
+                data-account="asthila"
+            >
+
+                <div class="account-avatar asthila">
+                    A
+                </div>
+
+                <div class="account-text">
+
+    <strong>
+        Asthila Ayu Khinanthi
+    </strong>
+
+</div>
+
+                <div class="account-arrow">
+                    →
+                </div>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="account-card"
+                data-account="dicky"
+            >
+
+                <div class="account-avatar dicky">
+                    D
+                </div>
+
+              <div class="account-text">
+
+    <strong>
+        Dicky Prasetyo
+    </strong>
+
+</div>
+
+                <div class="account-arrow">
+                    →
+                </div>
+
+            </button>
+
+        </div>
+
+
+        <!-- PIN SECTION -->
+
+        <div
+            id="pinSection"
+            class="pin-section hidden"
+        >
+
+            <button
+                type="button"
+                id="backAccount"
+                class="back-button"
+            >
+                ← Pilih akun lain
+            </button>
+
+
+            <div
+                id="selectedInitial"
+                class="profile-avatar"
+            >
+                A
+            </div>
+
+
+            <h2 id="selectedName">
+                Asthila Ayu khinanthi
+            </h2>
+
+            <p id="selectedRole">
+                Pacar
+            </p>
+
+
+            <!-- PIN DOT -->
+
+            <div class="pin-wrapper">
+
+                <div
+                    id="pinDots"
+                    class="pin-dots"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <p
+                    id="pinHint"
+                    class="pin-hint"
+                >
+                    Masukkan 6 digit PIN
+                </p>
+
+
+                <!-- KEYPAD -->
+
+                <div class="pin-keypad">
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="1"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="2"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="3"
+                    >
+                        3
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="4"
+                    >
+                        4
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="5"
+                    >
+                        5
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="6"
+                    >
+                        6
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="7"
+                    >
+                        7
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="8"
+                    >
+                        8
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="9"
+                    >
+                        9
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="pin-key pin-empty"
+                        disabled
+                    >
+                    </button>
+
+                    <button
+                        type="button"
+                        class="pin-key"
+                        data-number="0"
+                    >
+                        0
+                    </button>
+
+                    <button
+                        type="button"
+                        id="deletePin"
+                        class="pin-key pin-delete"
+                    >
+                        ⌫
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="loginError"
+                class="login-error"
+            >
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<div
+    id="dashboard"
+    class="dashboard hidden"
+>
+
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
 
         <div class="brand">
 
-            <div class="brand-logo">
-                ♡
-            </div>
-
-            <div class="brand-text">
-
-                <strong>
-                    Tabungan
-                </strong>
-
-                <span>
-                    Bersama
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <nav class="sidebar-nav">
-
-
-            <button
-                class="nav-item active"
-                data-page="dashboard"
-            >
-
-                <span class="nav-icon">
-                    ◉
-                </span>
-
-                Dashboard
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="keuangan"
-            >
-
-                <span class="nav-icon">
-                    ▣
-                </span>
-
-                Data Keuangan
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="target"
-            >
-
-                <span class="nav-icon">
-                    ♡
-                </span>
-
-                Target Wedding
-
-            </button>
-
-
-            <button
-                class="nav-item"
-                data-page="riwayat"
-            >
-
-                <span class="nav-icon">
-                    ◷
-                </span>
-
-                Riwayat
-
-            </button>
-
-
-        </nav>
-
-
-        <div class="sidebar-footer">
-
-            <div class="couple-avatar">
+            <div class="brand-icon">
                 ♡
             </div>
 
             <div>
-
-                <strong>
-                    Dicky & Asthila
-                </strong>
-
-                <span>
-                    Menuju hari bahagia
-                </span>
-
-            </div>
-
-        </div>
-
-
-    </aside>
-
-
-
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
-    <main class="main">
-
-
-        <!-- =================================================
-             HEADER
-        ================================================== -->
-
-        <header class="header">
-
-
-            <div>
-
-                <span class="header-label">
-                    OUR FINANCIAL JOURNEY
-                </span>
 
                 <h1>
-                    Tabungan Bersama
+                    Our Little Fund
                 </h1>
 
+                <span>
+                    Tabungan untuk masa depan kita
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-user">
+
+            <div
+                id="currentUserAvatar"
+                class="header-avatar"
+            >
+                D
+            </div>
+
+            <div class="header-user-info">
+
+                <strong id="currentUserName">
+                    Dicky
+                </strong>
+
+                <span id="currentUserRole">
+                    Kamu
+                </span>
+
             </div>
 
 
-            <div class="header-right">
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                Keluar
+            </button>
+
+        </div>
+
+    </header>
 
 
-                <div class="today">
 
-                    <span>
-                        Hari ini
-                    </span>
+    <!-- MAIN -->
 
-                    <strong id="currentDate">
-                        -
+    <main class="dashboard-main">
+
+
+        <!-- HERO TARGET -->
+
+        <section class="hero-card">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            ♡ TARGET PERNIKAHAN
+        </div>
+
+        <div class="hero-title">
+            <h2>
+                Tabungan untuk
+                <br>
+                hari besar kita.
+            </h2>
+
+            <p>
+                Sedikit demi sedikit, kita kumpulkan
+                bersama.
+            </p>
+        </div>
+
+        <div class="hero-amount">
+
+            <span>
+                Tabungan saat ini
+            </span>
+
+            <strong id="totalSaved">
+                Rp0
+            </strong>
+
+        </div>
+
+        <div class="progress-wrapper">
+
+            <div class="progress-info">
+
+                <span>
+                    Progress menuju target
+                </span>
+
+                <strong id="progressPercent">
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                    style="width: 0%"
+                ></div>
+
+            </div>
+
+            <div class="target-info">
+
+                <span>
+                    Target
+                    <strong id="targetAmount">
+                        Rp120.000.000
+                    </strong>
+                </span>
+
+                <span>
+                    Sisa
+                    <strong id="remainingAmount">
+                        Rp120.000.000
+                    </strong>
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-decoration">
+
+        <div class="big-heart">
+            ♡
+        </div>
+
+        <div class="ring">
+            💍
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WEDDING DREAM
+===================================================== -->
+
+<section class="dream-section">
+
+    <div class="dream-card">
+
+        <div class="dream-content">
+
+            <span class="dream-label">
+                OUR WEDDING DREAM
+            </span>
+
+            <h2>
+                Suatu hari nanti...
+            </h2>
+
+            <p>
+                Semua tabungan kecil ini akan menjadi
+                bagian dari satu hari besar yang
+                kita tunggu bersama.
+            </p>
+
+            <div class="dream-signature">
+                Asthila & Dicky
+                <span>♡</span>
+            </div>
+
+        </div>
+
+
+        <div class="dream-icon">
+            💍
+        </div>
+
+    </div>
+
+</section>
+
+
+
+        <!-- ACTION BUTTON -->
+
+        <section class="action-section">
+
+            <button
+                type="button"
+                id="addMoneyButton"
+                class="action-button primary"
+            >
+
+                <span class="action-icon">
+                    ＋
+                </span>
+
+                <span>
+
+                    <strong>
+                        Tambah Tabungan
                     </strong>
 
-                </div>
+                    <small>
+                        Masukkan uang ke tabungan
+                    </small>
+
+                </span>
+
+            </button>
 
 
-                <button
-                    class="add-button"
-                    id="openTransaction"
-                >
+            <button
+                type="button"
+                id="spendMoneyButton"
+                class="action-button secondary"
+            >
 
-                    <span>
-                        +
-                    </span>
+                <span class="action-icon">
+                    −
+                </span>
 
-                    Tambah Transaksi
+                <span>
 
-                </button>
+                    <strong>
+                        Gunakan Tabungan
+                    </strong>
 
+                    <small>
+                        Liburan, dinner, atau kebutuhan
+                    </small>
 
-            </div>
+                </span>
 
+            </button>
 
-        </header>
-
-
-
-        <!-- =================================================
-             DASHBOARD
-        ================================================== -->
-
-        <section class="dashboard">
+        </section>
 
 
-            <!-- WELCOME -->
 
-            <div class="welcome">
+        <!-- OVERVIEW -->
+
+        <section class="overview-section">
+
+            <div class="section-heading">
 
                 <div>
 
-                    <span>
-                        WEDDING FUND
+                    <span class="eyebrow">
+                        OVERVIEW
                     </span>
 
                     <h2>
-                        Sedikit demi sedikit,
-                        menuju hari bahagia. ♡
+                        Keuangan kita
                     </h2>
 
                 </div>
 
-                <p>
-                    Semua tabungan kita,
-                    satu tujuan: Wedding.
-                </p>
+                <span class="heading-love">
+                    ♡
+                </span>
 
             </div>
 
 
-
-            <!-- =================================================
-                 BALANCE
-            ================================================== -->
-
-            <section class="balance-card">
+            <div class="overview-grid">
 
 
-                <div class="balance-content">
-
-                    <span class="card-label">
-                        TOTAL TABUNGAN WEDDING
-                    </span>
-
-                    <h2 id="totalBalance">
-                        Rp12.500.000
-                    </h2>
-
-                    <p>
-                        Target wedding
-                        <strong id="targetAmount">
-                            Rp50.000.000
-                        </strong>
-                    </p>
-
-
-                    <div class="progress-area">
-
-                        <div class="progress-track">
-
-                            <div
-                                class="progress-fill"
-                                id="progressFill"
-                            ></div>
-
-                        </div>
-
-                        <strong id="progressPercent">
-                            25%
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="balance-heart">
-                    ♡
-                </div>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 STATISTICS
-            ================================================== -->
-
-            <section class="stats">
-
+                <!-- TOTAL MASUK -->
 
                 <div class="stat-card">
 
-                    <div class="stat-icon green">
+                    <div class="stat-icon income">
                         ↑
                     </div>
 
                     <div>
 
                         <span>
-                            TOTAL MENABUNG
+                            Total masuk
                         </span>
 
                         <strong id="totalIncome">
-                            Rp15.000.000
+                            Rp0
                         </strong>
 
                     </div>
@@ -320,20 +610,22 @@
                 </div>
 
 
+                <!-- TOTAL KELUAR -->
+
                 <div class="stat-card">
 
-                    <div class="stat-icon orange">
+                    <div class="stat-icon expense">
                         ↓
                     </div>
 
                     <div>
 
                         <span>
-                            TOTAL TERPAKAI
+                            Total keluar
                         </span>
 
                         <strong id="totalExpense">
-                            Rp2.500.000
+                            Rp0
                         </strong>
 
                     </div>
@@ -341,350 +633,423 @@
                 </div>
 
 
+                <!-- TARGET -->
+
                 <div class="stat-card">
 
-                    <div class="stat-icon blue">
-                        D
+                    <div class="stat-icon target">
+                        ♡
                     </div>
 
                     <div>
 
                         <span>
-                            DICKY
-                        </span>
-
-                        <strong id="dickyTotal">
-                            Rp6.500.000
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-icon pink">
-                        A
-                    </div>
-
-                    <div>
-
-                        <span>
-                            ASTHILA
-                        </span>
-
-                        <strong id="asthilaTotal">
-                            Rp6.000.000
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-            </section>
-
-
-
-            <!-- =================================================
-                 CHART AREA
-            ================================================== -->
-
-            <section class="dashboard-grid">
-
-
-                <div class="panel chart-panel">
-
-
-                    <div class="panel-title">
-
-                        <div>
-
-                            <span>
-                                PERKEMBANGAN TABUNGAN
-                            </span>
-
-                            <h3>
-                                Perjalanan menuju Wedding
-                            </h3>
-
-                        </div>
-
-
-                        <div class="chart-filter">
-                            Semua
-                        </div>
-
-                    </div>
-
-
-                    <div class="chart-wrapper">
-
-                        <canvas
-                            id="weddingChart"
-                        ></canvas>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- =================================================
-                     ALOKASI
-                ================================================== -->
-
-                <div class="panel allocation-panel">
-
-
-                    <div class="panel-title">
-
-                        <div>
-
-                            <span>
-                                ALOKASI DANA
-                            </span>
-
-                            <h3>
-                                Dana kita
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="allocation-list">
-
-
-                        <div class="allocation-row">
-
-                            <div>
-
-                                <i class="dot wedding"></i>
-
-                                Wedding
-
-                            </div>
-
-                            <strong>
-                                80%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="allocation-row">
-
-                            <div>
-
-                                <i class="dot vacation"></i>
-
-                                Liburan
-
-                            </div>
-
-                            <strong>
-                                8%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="allocation-row">
-
-                            <div>
-
-                                <i class="dot dinner"></i>
-
-                                Dinner
-
-                            </div>
-
-                            <strong>
-                                7%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="allocation-row">
-
-                            <div>
-
-                                <i class="dot emergency"></i>
-
-                                Darurat
-
-                            </div>
-
-                            <strong>
-                                5%
-                            </strong>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="focus-card">
-
-                        <span>
-                            WEDDING FOCUS
+                            Target nikah
                         </span>
 
                         <strong>
-                            Prioritas utama kita 💍
+                            Rp120 Juta
                         </strong>
 
-                        <p>
-                            Pengeluaran lain tetap tercatat
-                            agar tabungan wedding tetap
-                            terkontrol.
-                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- KONTRIBUSI -->
+
+        <section class="couple-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        OUR CONTRIBUTION
+                    </span>
+
+                    <h2>
+                        Kontribusi kita
+                    </h2>
+
+                </div>
+
+                <span class="heading-love">
+                    ♥
+                </span>
+
+            </div>
+
+
+            <div class="couple-grid">
+
+
+                <!-- ASTHILA -->
+
+                <div class="person-card">
+
+                    <div class="person-header">
+
+                        <div
+                            class="person-avatar asthila"
+                        >
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Asthila
+                            </strong>
+
+                            <span>
+                                Pacar ♡
+                            </span>
+
+                        </div>
 
                     </div>
 
 
+                    <strong
+                        id="asthilaAmount"
+                        class="person-amount"
+                    >
+                        Rp0
+                    </strong>
+
+
+                    <div class="person-progress">
+
+                        <div
+                            id="asthilaProgress"
+                            class="person-progress-bar"
+                            style="width: 0%"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <span
+                        id="asthilaPercent"
+                        class="person-percent"
+                    >
+                        0%
+                    </span>
+
                 </div>
 
 
-            </section>
+
+                <!-- DICKY -->
+
+                <div class="person-card">
+
+                    <div class="person-header">
+
+                        <div
+                            class="person-avatar dicky"
+                        >
+                            D
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Dicky
+                            </strong>
+
+                            <span>
+                                Kamu ♡
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <strong
+                        id="dickyAmount"
+                        class="person-amount"
+                    >
+                        Rp0
+                    </strong>
+
+
+                    <div class="person-progress">
+
+                        <div
+                            id="dickyProgress"
+                            class="person-progress-bar"
+                            style="width: 0%"
+                        >
+                        </div>
+
+                    </div>
+
+
+                    <span
+                        id="dickyPercent"
+                        class="person-percent"
+                    >
+                        0%
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
-            <!-- =================================================
-                 RECENT
-            ================================================== -->
+        <!-- STATISTIK -->
 
-            <section class="panel recent-panel">
+        <section class="statistics-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STATISTICS
+                    </span>
+
+                    <h2>
+                        Perjalanan tabungan
+                    </h2>
+
+                </div>
+
+                <span class="heading-love">
+                    📊
+                </span>
+
+            </div>
 
 
-                <div class="panel-title">
+            <div class="statistics-card">
 
-                    <div>
+                <div class="chart-header">
+
+    <div>
+
+        <strong id="chartTitle">
+            Aktivitas 6 bulan terakhir
+        </strong>
+
+        <span>
+            Uang masuk & keluar
+        </span>
+
+    </div>
+
+    <div class="chart-filter">
+
+        <button
+            type="button"
+            class="chart-filter-button active"
+            data-period="daily"
+        >
+            Harian
+        </button>
+
+        <button
+            type="button"
+            class="chart-filter-button"
+            data-period="weekly"
+        >
+            Mingguan
+        </button>
+
+        <button
+            type="button"
+            class="chart-filter-button"
+            data-period="monthly"
+        >
+            Bulanan
+        </button>
+
+    </div>
+
+    <div class="chart-legend">
+
+        <span>
+            <i class="legend-dot income"></i>
+            Masuk
+        </span>
+
+        <span>
+            <i class="legend-dot expense"></i>
+            Keluar
+        </span>
+
+    </div>
+
+</div>
+
+
+                    <div class="chart-legend">
 
                         <span>
-                            AKTIVITAS TERBARU
+                            <i class="legend-dot income"></i>
+                            Masuk
                         </span>
 
-                        <h3>
-                            Transaksi terakhir
-                        </h3>
+                        <span>
+                            <i class="legend-dot expense"></i>
+                            Keluar
+                        </span>
 
                     </div>
-
-
-                    <button class="see-all">
-                        Lihat semua
-                    </button>
 
                 </div>
 
 
-                <div class="transactions">
+                <div
+                    id="chart"
+                    class="chart"
+                >
 
-
-                    <div class="transaction">
-
-                        <div class="transaction-left">
-
-                            <div class="transaction-avatar blue">
-                                D
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Dicky menabung
-                                </strong>
-
-                                <span>
-                                    Wedding • Hari ini
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <strong class="income">
-                            +Rp500.000
-                        </strong>
-
+                    <div class="chart-empty">
+                        Grafik akan muncul setelah ada transaksi 🤍
                     </div>
-
-
-
-                    <div class="transaction">
-
-                        <div class="transaction-left">
-
-                            <div class="transaction-avatar pink">
-                                A
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Asthila menabung
-                                </strong>
-
-                                <span>
-                                    Wedding • Kemarin
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <strong class="income">
-                            +Rp750.000
-                        </strong>
-
-                    </div>
-
-
-
-                    <div class="transaction">
-
-                        <div class="transaction-left">
-
-                            <div class="transaction-avatar orange">
-                                ↓
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Dinner bersama
-                                </strong>
-
-                                <span>
-                                    Dinner • 2 hari lalu
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <strong class="expense">
-                            -Rp250.000
-                        </strong>
-
-                    </div>
-
 
                 </div>
 
+            </div>
 
-            </section>
+        </section>
 
+
+
+        <!-- PENGELUARAN KATEGORI -->
+
+        <section class="category-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        SPENDING
+                    </span>
+
+                    <h2>
+                        Uang kita digunakan untuk
+                    </h2>
+
+                </div>
+
+                <span class="heading-love">
+                    ♡
+                </span>
+
+            </div>
+
+
+            <div
+                id="categoryCard"
+                class="category-card"
+            >
+
+                <div class="category-empty">
+
+                    Belum ada pengeluaran.
+                    <br>
+
+                    Fokus kita tetap untuk wedding 🤍
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACHIEVEMENTS -->
+
+        <section class="achievement-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        LITTLE MILESTONES
+                    </span>
+
+                    <h2>
+                        Pencapaian kita
+                    </h2>
+
+                </div>
+
+                <span class="heading-love">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <div
+                id="achievementGrid"
+                class="achievement-grid"
+            >
+            </div>
+
+        </section>
+
+
+
+        <!-- RIWAYAT -->
+
+        <section class="transaction-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        TRANSACTIONS
+                    </span>
+
+                    <h2>
+                        Riwayat transaksi
+                    </h2>
+
+                </div>
+
+                <span class="heading-love">
+                    ♡
+                </span>
+
+            </div>
+
+
+            <div
+                id="transactionList"
+                class="transaction-list"
+            >
+
+                <div class="transaction-empty">
+
+                    Belum ada transaksi.
+                    <br>
+
+                    Yuk mulai isi tabungan nikah
+                    kalian 🤍
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -692,241 +1057,125 @@
     </main>
 
 
+
+    <!-- FOOTER -->
+
+    <footer class="dashboard-footer">
+
+        <div class="footer-heart">
+            ♡
+        </div>
+
+        <p>
+            Dibuat untuk perjalanan kecil
+            menuju hari besar kita.
+        </p>
+
+        <span>
+            Our Little Fund • Together
+        </span>
+
+    </footer>
+
 </div>
 
 
 
 <!-- =====================================================
      TRANSACTION MODAL
-====================================================== -->
+===================================================== -->
 
 <div
-    class="modal"
     id="transactionModal"
+    class="modal hidden"
 >
 
-
-    <div class="modal-box">
-
-
-        <div class="modal-header">
+    <div class="modal-background"></div>
 
 
+    <div class="modal-card">
+
+        <button
+            type="button"
+            class="modal-close close-modal"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon">
+            ♡
+        </div>
+
+
+        <h2 id="modalTitle">
+            Tambah Tabungan
+        </h2>
+
+
+        <p id="modalDescription">
+            Catat uang yang kamu masukkan
+            ke tabungan nikah.
+        </p>
+
+
+        <form id="transactionForm">
+
+    <!-- REKENING TABUNGAN -->
+    <div id="bankInfo" class="bank-info">
+
+        <div class="bank-info-header">
             <div>
-
-                <span>
-                    KEUANGAN BERSAMA
-                </span>
-
-                <h2>
-                    Tambah Transaksi
-                </h2>
-
-                <p>
-                    Catat pemasukan atau penggunaan
-                    dana bersama.
-                </p>
-
+                <span class="bank-label">TRANSFER KE</span>
+                <strong>BCA Syariah</strong>
             </div>
+        </div>
 
+        <div class="bank-owner">
+            ASTHILA AYU KHINANTHI
+        </div>
+
+        <div class="bank-number-row">
+
+            <strong id="bankAccountNumber">
+                0080011398
+            </strong>
 
             <button
-                class="close-button"
-                id="closeTransaction"
+                type="button"
+                id="copyBankButton"
+                class="copy-bank-button"
             >
-                ×
+                Salin
             </button>
 
-
         </div>
 
+        <span
+            id="copyBankMessage"
+            class="copy-bank-message"
+        ></span>
 
+    </div>
 
-        <!-- AKUN -->
-
-        <div class="form-group">
-
-            <label>
-                Siapa yang melakukan transaksi?
-            </label>
-
-
-            <div class="account-list">
-
-
-                <button
-                    class="account-option"
-                    data-account="dicky"
-                >
-
-                    <div class="account-avatar blue">
-                        D
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Dicky Prasetyo
-                        </strong>
-
-                        <span>
-                            Akun Dicky
-                        </span>
-
-                    </div>
-
-                    <i>
-                        ✓
-                    </i>
-
-                </button>
-
-
-
-                <button
-                    class="account-option"
-                    data-account="asthila"
-                >
-
-                    <div class="account-avatar pink">
-                        A
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Asthila Ayu Khinanthi
-                        </strong>
-
-                        <span>
-                            Akun Asthila
-                        </span>
-
-                    </div>
-
-                    <i>
-                        ✓
-                    </i>
-
-                </button>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- PIN -->
-
-        <div
-            class="form-group hidden"
-            id="pinArea"
-        >
-
-            <label>
-                Masukkan PIN
-            </label>
-
+            <!-- TYPE -->
 
             <input
-                type="password"
-                id="pinInput"
-                maxlength="6"
-                placeholder="Masukkan PIN"
-                inputmode="numeric"
+                type="hidden"
+                id="transactionType"
+                value="income"
             >
 
 
-            <small
-                class="error"
-                id="pinError"
-            ></small>
-
-        </div>
-
-
-
-        <!-- FORM TRANSAKSI -->
-
-        <div
-            id="transactionForm"
-            class="hidden"
-        >
-
+            <!-- NOMINAL -->
 
             <div class="form-group">
 
-                <label>
-                    Jenis transaksi
-                </label>
-
-
-                <div class="type-list">
-
-
-                    <button
-                        class="type-option active"
-                        data-type="income"
-                    >
-
-                        <span>
-                            ↑
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Pemasukan
-                            </strong>
-
-                            <small>
-                                Menambah saldo
-                            </small>
-
-                        </div>
-
-                    </button>
-
-
-                    <button
-                        class="type-option"
-                        data-type="expense"
-                    >
-
-                        <span>
-                            ↓
-                        </span>
-
-                        <div>
-
-                            <strong>
-                                Pengeluaran
-                            </strong>
-
-                            <small>
-                                Mengurangi saldo
-                            </small>
-
-                        </div>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="form-group">
-
-                <label>
+                <label for="moneyInput">
                     Nominal
                 </label>
 
-
-                <div class="amount">
+                <div class="money-input">
 
                     <span>
                         Rp
@@ -934,9 +1183,10 @@
 
                     <input
                         type="text"
-                        id="amountInput"
+                        id="moneyInput"
                         placeholder="0"
                         inputmode="numeric"
+                        autocomplete="off"
                     >
 
                 </div>
@@ -944,34 +1194,36 @@
             </div>
 
 
+            <!-- CATEGORY -->
 
             <div class="form-group">
 
-                <label>
+                <label for="categoryInput">
                     Kategori
                 </label>
 
+                <select
+                    id="categoryInput"
+                >
 
-                <select id="categoryInput">
-
-                    <option value="wedding">
-                        💍 Wedding
+                    <option value="Tabungan">
+                        Tabungan
                     </option>
 
-                    <option value="darurat">
-                        🚨 Keperluan Darurat
+                    <option value="Gaji">
+                        Gaji
                     </option>
 
-                    <option value="liburan">
-                        ✈️ Liburan
+                    <option value="Bonus">
+                        Bonus
                     </option>
 
-                    <option value="dinner">
-                        🍽️ Dinner
+                    <option value="Hadiah">
+                        Hadiah
                     </option>
 
-                    <option value="lainnya">
-                        📦 Lainnya
+                    <option value="Lainnya">
+                        Lainnya
                     </option>
 
                 </select>
@@ -979,141 +1231,132 @@
             </div>
 
 
+            <!-- NOTE -->
 
             <div class="form-group">
 
-                <label>
+                <label for="noteInput">
                     Catatan
-                    <span>
-                        (opsional)
-                    </span>
                 </label>
-
 
                 <textarea
                     id="noteInput"
-                    placeholder="Contoh: Nabung bulan Agustus..."
+                    rows="3"
+                    placeholder="Contoh: Nabung dari gaji bulan ini..."
                 ></textarea>
 
             </div>
 
 
+            <!-- PROOF -->
 
             <div class="form-group">
 
-                <label>
+                <label for="proofInput">
                     Bukti transaksi
                     <span>
                         (opsional)
                     </span>
                 </label>
 
+                <label
+                    for="proofInput"
+                    class="proof-upload"
+                >
 
-                <label class="upload">
-
-                    <span>
+                    <span class="proof-upload-icon">
                         📎
                     </span>
 
-                    <div>
+                    <strong>
+                        Pilih bukti transaksi
+                    </strong>
 
-                        <strong>
-                            Tambahkan bukti
-                        </strong>
-
-                        <small>
-                            JPG, PNG atau PDF
-                        </small>
-
-                    </div>
-
-
-                    <input
-                        type="file"
-                        id="proofInput"
-                        accept=".jpg,.jpeg,.png,.pdf"
-                    >
+                    <small>
+                        JPG, PNG, PDF, atau dokumen lainnya
+                    </small>
 
                 </label>
 
 
+                <input
+                    type="file"
+                    id="proofInput"
+                    accept="image/*,.pdf,.doc,.docx"
+                    hidden
+                >
+
+
                 <div
-                    class="file-name"
-                    id="fileName"
-                ></div>
+                    id="proofPreview"
+                    class="proof-preview"
+                >
+                </div>
 
             </div>
 
 
-            <div
-                class="error"
-                id="transactionError"
-            ></div>
-
-
             <button
-                class="continue-button"
-                id="continueButton"
+                type="submit"
+                class="modal-submit"
             >
                 Lanjutkan
+                <span>
+                    →
+                </span>
             </button>
 
-
-        </div>
-
+        </form>
 
     </div>
-
 
 </div>
 
 
 
 <!-- =====================================================
-     CONFIRMATION
-====================================================== -->
+     CONFIRM MODAL
+===================================================== -->
 
 <div
-    class="modal"
     id="confirmModal"
+    class="modal hidden"
 >
 
-
-    <div class="confirm-box">
-
-
-        <div class="confirm-icon">
-            ?
-        </div>
+    <div class="modal-background"></div>
 
 
-        <span>
-            KONFIRMASI
-        </span>
+    <div class="modal-card confirm-card">
+
+       <div class="confirm-icon">
+    ♡
+</div>
 
 
         <h2>
-            Pastikan transaksi sudah benar
+            Sudah yakin?
         </h2>
 
 
         <p>
-            Periksa kembali data sebelum transaksi
-            disimpan.
+            Cek kembali transaksi ini
+            sebelum disimpan.
         </p>
 
 
-        <div class="confirm-data">
+        <div class="confirm-detail">
 
 
             <div>
 
                 <span>
-                    Akun
+                    Nominal
                 </span>
 
-                <strong id="confirmAccount">
-                    -
+                <strong
+                    id="confirmAmount"
+                >
+                    Rp0
                 </strong>
 
             </div>
@@ -1125,8 +1368,10 @@
                     Jenis
                 </span>
 
-                <strong id="confirmType">
-                    -
+                <strong
+                    id="confirmType"
+                >
+                    Menambah tabungan
                 </strong>
 
             </div>
@@ -1138,8 +1383,10 @@
                     Kategori
                 </span>
 
-                <strong id="confirmCategory">
-                    -
+                <strong
+                    id="confirmCategory"
+                >
+                    Tabungan
                 </strong>
 
             </div>
@@ -1148,11 +1395,13 @@
             <div>
 
                 <span>
-                    Nominal
+                    Atas nama
                 </span>
 
-                <strong id="confirmAmount">
-                    -
+                <strong
+                    id="confirmUser"
+                >
+                    Dicky Prasetyo
                 </strong>
 
             </div>
@@ -1164,41 +1413,49 @@
                     Catatan
                 </span>
 
-                <strong id="confirmNote">
+                <strong
+                    id="confirmNote"
+                >
                     -
                 </strong>
 
             </div>
-
 
         </div>
 
 
         <div class="confirm-buttons">
 
-            <button id="backConfirm">
-                Periksa Lagi
+            <button
+                type="button"
+                id="cancelConfirmButton"
+                class="confirm-cancel"
+            >
+                Batal
             </button>
 
-            <button id="saveConfirm">
-                Ya, Simpan
+
+            <button
+                type="button"
+                id="confirmTransactionButton"
+                class="confirm-ok"
+            >
+                Ya, Simpan ♡
             </button>
 
         </div>
 
-
     </div>
-
 
 </div>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
