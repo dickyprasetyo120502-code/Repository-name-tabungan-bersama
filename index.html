@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tabungan Bersama</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                ♡
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    Tabungan
+                </strong>
+
+                <span>
+                    Bersama
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <button
+                class="nav-item active"
+                data-page="dashboard"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                Dashboard
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="keuangan"
+            >
+
+                <span class="nav-icon">
+                    ▣
+                </span>
+
+                Data Keuangan
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="target"
+            >
+
+                <span class="nav-icon">
+                    ♡
+                </span>
+
+                Target Wedding
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-page="riwayat"
+            >
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                Riwayat
+
+            </button>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="couple-avatar">
+                ♡
+            </div>
+
+            <div>
+
+                <strong>
+                    Dicky & Asthila
+                </strong>
+
+                <span>
+                    Menuju hari bahagia
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="header">
+
+
+            <div>
+
+                <span class="header-label">
+                    OUR FINANCIAL JOURNEY
+                </span>
+
+                <h1>
+                    Tabungan Bersama
+                </h1>
+
+            </div>
+
+
+            <div class="header-right">
+
+
+                <div class="today">
+
+                    <span>
+                        Hari ini
+                    </span>
+
+                    <strong id="currentDate">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="add-button"
+                    id="openTransaction"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Tambah Transaksi
+
+                </button>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             DASHBOARD
+        ================================================== -->
+
+        <section class="dashboard">
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome">
+
+                <div>
+
+                    <span>
+                        WEDDING FUND
+                    </span>
+
+                    <h2>
+                        Sedikit demi sedikit,
+                        menuju hari bahagia. ♡
+                    </h2>
+
+                </div>
+
+                <p>
+                    Semua tabungan kita,
+                    satu tujuan: Wedding.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BALANCE
+            ================================================== -->
+
+            <section class="balance-card">
+
+
+                <div class="balance-content">
+
+                    <span class="card-label">
+                        TOTAL TABUNGAN WEDDING
+                    </span>
+
+                    <h2 id="totalBalance">
+                        Rp12.500.000
+                    </h2>
+
+                    <p>
+                        Target wedding
+                        <strong id="targetAmount">
+                            Rp50.000.000
+                        </strong>
+                    </p>
+
+
+                    <div class="progress-area">
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-fill"
+                                id="progressFill"
+                            ></div>
+
+                        </div>
+
+                        <strong id="progressPercent">
+                            25%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="balance-heart">
+                    ♡
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section class="stats">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ↑
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL MENABUNG
+                        </span>
+
+                        <strong id="totalIncome">
+                            Rp15.000.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ↓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            TOTAL TERPAKAI
+                        </span>
+
+                        <strong id="totalExpense">
+                            Rp2.500.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        D
+                    </div>
+
+                    <div>
+
+                        <span>
+                            DICKY
+                        </span>
+
+                        <strong id="dickyTotal">
+                            Rp6.500.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon pink">
+                        A
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ASTHILA
+                        </span>
+
+                        <strong id="asthilaTotal">
+                            Rp6.000.000
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHART AREA
+            ================================================== -->
+
+            <section class="dashboard-grid">
+
+
+                <div class="panel chart-panel">
+
+
+                    <div class="panel-title">
+
+                        <div>
+
+                            <span>
+                                PERKEMBANGAN TABUNGAN
+                            </span>
+
+                            <h3>
+                                Perjalanan menuju Wedding
+                            </h3>
+
+                        </div>
+
+
+                        <div class="chart-filter">
+                            Semua
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-wrapper">
+
+                        <canvas
+                            id="weddingChart"
+                        ></canvas>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ALOKASI
+                ================================================== -->
+
+                <div class="panel allocation-panel">
+
+
+                    <div class="panel-title">
+
+                        <div>
+
+                            <span>
+                                ALOKASI DANA
+                            </span>
+
+                            <h3>
+                                Dana kita
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="allocation-list">
+
+
+                        <div class="allocation-row">
+
+                            <div>
+
+                                <i class="dot wedding"></i>
+
+                                Wedding
+
+                            </div>
+
+                            <strong>
+                                80%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <div>
+
+                                <i class="dot vacation"></i>
+
+                                Liburan
+
+                            </div>
+
+                            <strong>
+                                8%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <div>
+
+                                <i class="dot dinner"></i>
+
+                                Dinner
+
+                            </div>
+
+                            <strong>
+                                7%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <div>
+
+                                <i class="dot emergency"></i>
+
+                                Darurat
+
+                            </div>
+
+                            <strong>
+                                5%
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="focus-card">
+
+                        <span>
+                            WEDDING FOCUS
+                        </span>
+
+                        <strong>
+                            Prioritas utama kita 💍
+                        </strong>
+
+                        <p>
+                            Pengeluaran lain tetap tercatat
+                            agar tabungan wedding tetap
+                            terkontrol.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECENT
+            ================================================== -->
+
+            <section class="panel recent-panel">
+
+
+                <div class="panel-title">
+
+                    <div>
+
+                        <span>
+                            AKTIVITAS TERBARU
+                        </span>
+
+                        <h3>
+                            Transaksi terakhir
+                        </h3>
+
+                    </div>
+
+
+                    <button class="see-all">
+                        Lihat semua
+                    </button>
+
+                </div>
+
+
+                <div class="transactions">
+
+
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="transaction-avatar blue">
+                                D
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Dicky menabung
+                                </strong>
+
+                                <span>
+                                    Wedding • Hari ini
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="income">
+                            +Rp500.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="transaction-avatar pink">
+                                A
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Asthila menabung
+                                </strong>
+
+                                <span>
+                                    Wedding • Kemarin
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="income">
+                            +Rp750.000
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="transaction">
+
+                        <div class="transaction-left">
+
+                            <div class="transaction-avatar orange">
+                                ↓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Dinner bersama
+                                </strong>
+
+                                <span>
+                                    Dinner • 2 hari lalu
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <strong class="expense">
+                            -Rp250.000
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     TRANSACTION MODAL
+====================================================== -->
+
+<div
+    class="modal"
+    id="transactionModal"
+>
+
+
+    <div class="modal-box">
+
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <span>
+                    KEUANGAN BERSAMA
+                </span>
+
+                <h2>
+                    Tambah Transaksi
+                </h2>
+
+                <p>
+                    Catat pemasukan atau penggunaan
+                    dana bersama.
+                </p>
+
+            </div>
+
+
+            <button
+                class="close-button"
+                id="closeTransaction"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <!-- AKUN -->
+
+        <div class="form-group">
+
+            <label>
+                Siapa yang melakukan transaksi?
+            </label>
+
+
+            <div class="account-list">
+
+
+                <button
+                    class="account-option"
+                    data-account="dicky"
+                >
+
+                    <div class="account-avatar blue">
+                        D
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Dicky Prasetyo
+                        </strong>
+
+                        <span>
+                            Akun Dicky
+                        </span>
+
+                    </div>
+
+                    <i>
+                        ✓
+                    </i>
+
+                </button>
+
+
+
+                <button
+                    class="account-option"
+                    data-account="asthila"
+                >
+
+                    <div class="account-avatar pink">
+                        A
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Asthila Ayu Khinanthi
+                        </strong>
+
+                        <span>
+                            Akun Asthila
+                        </span>
+
+                    </div>
+
+                    <i>
+                        ✓
+                    </i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PIN -->
+
+        <div
+            class="form-group hidden"
+            id="pinArea"
+        >
+
+            <label>
+                Masukkan PIN
+            </label>
+
+
+            <input
+                type="password"
+                id="pinInput"
+                maxlength="6"
+                placeholder="Masukkan PIN"
+                inputmode="numeric"
+            >
+
+
+            <small
+                class="error"
+                id="pinError"
+            ></small>
+
+        </div>
+
+
+
+        <!-- FORM TRANSAKSI -->
+
+        <div
+            id="transactionForm"
+            class="hidden"
+        >
+
+
+            <div class="form-group">
+
+                <label>
+                    Jenis transaksi
+                </label>
+
+
+                <div class="type-list">
+
+
+                    <button
+                        class="type-option active"
+                        data-type="income"
+                    >
+
+                        <span>
+                            ↑
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Pemasukan
+                            </strong>
+
+                            <small>
+                                Menambah saldo
+                            </small>
+
+                        </div>
+
+                    </button>
+
+
+                    <button
+                        class="type-option"
+                        data-type="expense"
+                    >
+
+                        <span>
+                            ↓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Pengeluaran
+                            </strong>
+
+                            <small>
+                                Mengurangi saldo
+                            </small>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Nominal
+                </label>
+
+
+                <div class="amount">
+
+                    <span>
+                        Rp
+                    </span>
+
+                    <input
+                        type="text"
+                        id="amountInput"
+                        placeholder="0"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Kategori
+                </label>
+
+
+                <select id="categoryInput">
+
+                    <option value="wedding">
+                        💍 Wedding
+                    </option>
+
+                    <option value="darurat">
+                        🚨 Keperluan Darurat
+                    </option>
+
+                    <option value="liburan">
+                        ✈️ Liburan
+                    </option>
+
+                    <option value="dinner">
+                        🍽️ Dinner
+                    </option>
+
+                    <option value="lainnya">
+                        📦 Lainnya
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Catatan
+                    <span>
+                        (opsional)
+                    </span>
+                </label>
+
+
+                <textarea
+                    id="noteInput"
+                    placeholder="Contoh: Nabung bulan Agustus..."
+                ></textarea>
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Bukti transaksi
+                    <span>
+                        (opsional)
+                    </span>
+                </label>
+
+
+                <label class="upload">
+
+                    <span>
+                        📎
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Tambahkan bukti
+                        </strong>
+
+                        <small>
+                            JPG, PNG atau PDF
+                        </small>
+
+                    </div>
+
+
+                    <input
+                        type="file"
+                        id="proofInput"
+                        accept=".jpg,.jpeg,.png,.pdf"
+                    >
+
+                </label>
+
+
+                <div
+                    class="file-name"
+                    id="fileName"
+                ></div>
+
+            </div>
+
+
+            <div
+                class="error"
+                id="transactionError"
+            ></div>
+
+
+            <button
+                class="continue-button"
+                id="continueButton"
+            >
+                Lanjutkan
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CONFIRMATION
+====================================================== -->
+
+<div
+    class="modal"
+    id="confirmModal"
+>
+
+
+    <div class="confirm-box">
+
+
+        <div class="confirm-icon">
+            ?
+        </div>
+
+
+        <span>
+            KONFIRMASI
+        </span>
+
+
+        <h2>
+            Pastikan transaksi sudah benar
+        </h2>
+
+
+        <p>
+            Periksa kembali data sebelum transaksi
+            disimpan.
+        </p>
+
+
+        <div class="confirm-data">
+
+
+            <div>
+
+                <span>
+                    Akun
+                </span>
+
+                <strong id="confirmAccount">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Jenis
+                </span>
+
+                <strong id="confirmType">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Kategori
+                </span>
+
+                <strong id="confirmCategory">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Nominal
+                </span>
+
+                <strong id="confirmAmount">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Catatan
+                </span>
+
+                <strong id="confirmNote">
+                    -
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="confirm-buttons">
+
+            <button id="backConfirm">
+                Periksa Lagi
+            </button>
+
+            <button id="saveConfirm">
+                Ya, Simpan
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

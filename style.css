@@ -1,0 +1,1593 @@
+/* =========================================================
+   TABUNGAN BERSAMA
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f5f3f2;
+    color: #292627;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   APP
+
+   UKURAN DESAIN UTAMA.
+
+   TIDAK ADA SCALE.
+   TIDAK ADA TRANSFORM.
+
+   Laptop dan HP menggunakan layout yang sama.
+========================================================= */
+
+.app {
+    width: 1200px;
+    min-width: 1200px;
+    min-height: 760px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 220px;
+    min-width: 220px;
+    height: 760px;
+
+    background: #fbf9f8;
+
+    border-right:
+        1px solid #eee9e7;
+
+    padding: 25px 18px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 7px;
+
+    margin-bottom: 48px;
+}
+
+
+.brand-logo {
+    width: 37px;
+    height: 37px;
+
+    border-radius: 11px;
+
+    background: #f8dce6;
+
+    color: #c4577c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+.brand-text strong {
+    display: block;
+
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+
+.brand-text span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* NAV */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.nav-item {
+    width: 100%;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #999;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 12px;
+
+    font-size: 9px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+
+.nav-item.active {
+    background: #f6e2e9;
+
+    color: #bd5076;
+
+    font-weight: 700;
+}
+
+
+.nav-item:hover {
+    background: #f3eeee;
+}
+
+
+.nav-icon {
+    width: 17px;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* FOOTER */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    border-top:
+        1px solid #eee8e6;
+
+    padding: 17px 4px 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.couple-avatar {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+
+    background: #f8e1e8;
+
+    color: #c4577c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+}
+
+
+.sidebar-footer strong {
+    display: block;
+
+    font-size: 8px;
+}
+
+
+.sidebar-footer span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main {
+    width: 980px;
+    min-width: 980px;
+
+    padding: 25px 32px 40px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    height: 66px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid #eeeae8;
+}
+
+
+.header-label {
+    display: block;
+
+    color: #c4577c;
+
+    font-size: 7px;
+
+    letter-spacing: 1.4px;
+
+    font-weight: 700;
+}
+
+
+.header h1 {
+    font-size: 21px;
+
+    margin-top: 5px;
+}
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.today {
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.today span {
+    color: #aaa;
+
+    font-size: 7px;
+}
+
+
+.today strong {
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+.add-button {
+    height: 37px;
+
+    padding: 0 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #282526;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.add-button span {
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome {
+    padding: 22px 0 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+}
+
+
+.welcome > div > span {
+    color: #b6a4aa;
+
+    font-size: 7px;
+
+    letter-spacing: 1.3px;
+
+    font-weight: 700;
+}
+
+
+.welcome h2 {
+    font-size: 15px;
+
+    margin-top: 6px;
+}
+
+
+.welcome p {
+    color: #aaa;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   BALANCE
+========================================================= */
+
+.balance-card {
+    height: 145px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #f0dfe4;
+
+    background:
+        linear-gradient(
+            110deg,
+            #fff5f7,
+            #fdf9f9
+        );
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.card-label {
+    color: #b18e99;
+
+    font-size: 7px;
+
+    letter-spacing: 1.2px;
+
+    font-weight: 700;
+}
+
+
+.balance-content h2 {
+    font-size: 25px;
+
+    margin-top: 5px;
+}
+
+
+.balance-content p {
+    color: #999;
+
+    font-size: 8px;
+
+    margin-top: 4px;
+}
+
+
+.balance-content p strong {
+    color: #555;
+}
+
+
+.progress-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 11px;
+}
+
+
+.progress-track {
+    width: 260px;
+    height: 5px;
+
+    border-radius: 20px;
+
+    background: #eadfe2;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    width: 25%;
+    height: 100%;
+
+    background: #d35d86;
+
+    border-radius: inherit;
+}
+
+
+.progress-area > strong {
+    color: #bd5076;
+
+    font-size: 8px;
+}
+
+
+.balance-heart {
+    width: 58px;
+    height: 58px;
+
+    margin-right: 25px;
+
+    border-radius: 50%;
+
+    background: #f8dce6;
+
+    color: #c4577c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 11px;
+}
+
+
+.stat-card {
+    height: 74px;
+
+    border:
+        1px solid #eeeae8;
+
+    border-radius: 11px;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.stat-icon {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 9px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.green {
+    background: #eaf7ef;
+    color: #4b9b67;
+}
+
+
+.orange {
+    background: #fff2e3;
+    color: #c78a45;
+}
+
+
+.blue {
+    background: #edf3fb;
+    color: #5680b5;
+}
+
+
+.pink {
+    background: #f9e9ef;
+    color: #c4577c;
+}
+
+
+.stat-card span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 6px;
+
+    letter-spacing: .7px;
+
+    font-weight: 700;
+}
+
+
+.stat-card strong {
+    display: block;
+
+    color: #333;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(240px, .85fr);
+
+    gap: 11px;
+
+    margin-top: 11px;
+}
+
+
+.panel {
+    border:
+        1px solid #eeeae8;
+
+    border-radius: 13px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   CHART
+========================================================= */
+
+.chart-panel {
+    height: 260px;
+
+    padding: 17px;
+}
+
+
+.panel-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+}
+
+
+.panel-title > div:first-child > span {
+    color: #aaa;
+
+    font-size: 6px;
+
+    letter-spacing: 1.1px;
+
+    font-weight: 700;
+}
+
+
+.panel-title h3 {
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+.chart-filter {
+    padding: 5px 9px;
+
+    border:
+        1px solid #eee;
+
+    border-radius: 6px;
+
+    color: #777;
+
+    font-size: 7px;
+}
+
+
+.chart-wrapper {
+    height: 195px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   ALLOCATION
+========================================================= */
+
+.allocation-panel {
+    height: 260px;
+
+    padding: 17px;
+}
+
+
+.allocation-list {
+    margin-top: 17px;
+}
+
+
+.allocation-row {
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.allocation-row > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #555;
+
+    font-size: 8px;
+}
+
+
+.allocation-row strong {
+    color: #777;
+
+    font-size: 8px;
+}
+
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+}
+
+
+.dot.wedding {
+    background: #d35d86;
+}
+
+
+.dot.vacation {
+    background: #7da6d0;
+}
+
+
+.dot.dinner {
+    background: #d4a05e;
+}
+
+
+.dot.emergency {
+    background: #999;
+}
+
+
+.focus-card {
+    margin-top: 13px;
+
+    padding: 11px;
+
+    border-radius: 9px;
+
+    background: #faf7f7;
+}
+
+
+.focus-card span {
+    color: #c4577c;
+
+    font-size: 6px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+}
+
+
+.focus-card strong {
+    display: block;
+
+    font-size: 9px;
+
+    margin-top: 4px;
+}
+
+
+.focus-card p {
+    color: #999;
+
+    font-size: 7px;
+
+    line-height: 1.45;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   RECENT
+========================================================= */
+
+.recent-panel {
+    margin-top: 11px;
+
+    padding: 17px;
+}
+
+
+.see-all {
+    border: none;
+
+    background: transparent;
+
+    color: #c4577c;
+
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+.transactions {
+    margin-top: 11px;
+}
+
+
+.transaction {
+    height: 48px;
+
+    border-top:
+        1px solid #f1eeec;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.transaction-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.transaction-avatar {
+    width: 29px;
+    height: 29px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.transaction-left strong {
+    display: block;
+
+    font-size: 8px;
+}
+
+
+.transaction-left span {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 6px;
+
+    margin-top: 3px;
+}
+
+
+.income {
+    color: #4b9865;
+
+    font-size: 8px;
+}
+
+
+.expense {
+    color: #c58945;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(30, 25, 27, .55);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .2s;
+}
+
+
+.modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.modal-box {
+    width: 560px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 27px;
+}
+
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 23px;
+}
+
+
+.modal-header > div > span {
+    color: #c4577c;
+
+    font-size: 7px;
+
+    letter-spacing: 1.3px;
+
+    font-weight: 700;
+}
+
+
+.modal-header h2 {
+    font-size: 20px;
+
+    margin-top: 5px;
+}
+
+
+.modal-header p {
+    color: #999;
+
+    font-size: 9px;
+
+    margin-top: 5px;
+}
+
+
+.close-button {
+    width: 31px;
+    height: 31px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5f5f5;
+
+    font-size: 20px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-top: 17px;
+}
+
+
+.form-group > label {
+    display: block;
+
+    color: #555;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group > label span {
+    color: #aaa;
+
+    font-weight: 400;
+}
+
+
+.account-list,
+.type-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+}
+
+
+.account-option,
+.type-option {
+    border:
+        1px solid #eee;
+
+    background: white;
+
+    border-radius: 11px;
+
+    padding: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.account-option.selected,
+.type-option.active {
+    border-color: #d35d86;
+
+    background: #fff6f9;
+}
+
+
+.account-option i {
+    position: absolute;
+
+    right: 8px;
+    top: 8px;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #d35d86;
+
+    color: white;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8px;
+
+    font-style: normal;
+}
+
+
+.account-option.selected i {
+    display: flex;
+}
+
+
+.account-option > div:nth-child(2) {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.account-option strong {
+    font-size: 9px;
+}
+
+
+.account-option span {
+    color: #aaa;
+
+    font-size: 7px;
+}
+
+
+.account-avatar {
+    width: 33px;
+    height: 33px;
+
+    border-radius: 9px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    border:
+        1px solid #e9e7e6;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    color: #444;
+}
+
+
+#pinInput {
+    height: 42px;
+
+    padding: 0 12px;
+
+    letter-spacing: 4px;
+}
+
+
+.type-option > span {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 8px;
+
+    background: #eaf7ef;
+
+    color: #4b9865;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+.type-option:nth-child(2) > span {
+    background: #fff2e3;
+
+    color: #c58945;
+}
+
+
+.type-option strong {
+    display: block;
+
+    font-size: 9px;
+}
+
+
+.type-option small {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+}
+
+
+.amount {
+    height: 43px;
+
+    border:
+        1px solid #e9e7e6;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 12px;
+}
+
+
+.amount > span {
+    color: #888;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.amount input {
+    border: none;
+
+    background: transparent;
+
+    height: 100%;
+
+    padding-left: 8px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+select {
+    height: 43px;
+
+    padding: 0 11px;
+}
+
+
+textarea {
+    height: 80px;
+
+    padding: 11px;
+
+    resize: vertical;
+}
+
+
+.upload {
+    min-height: 62px;
+
+    border:
+        1px dashed #ddd;
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+}
+
+
+.upload > span {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 8px;
+
+    background: #fff0f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+.upload strong {
+    display: block;
+
+    font-size: 9px;
+}
+
+
+.upload small {
+    display: block;
+
+    color: #aaa;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+}
+
+
+.upload input {
+    display: none;
+}
+
+
+.file-name {
+    color: #777;
+
+    font-size: 7px;
+
+    margin-top: 5px;
+}
+
+
+.error {
+    color: #d95353;
+
+    font-size: 8px;
+
+    min-height: 12px;
+
+    margin-top: 5px;
+}
+
+
+.continue-button {
+    width: 100%;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #282526;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    margin-top: 14px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONFIRMATION
+========================================================= */
+
+.confirm-box {
+    width: 420px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 27px;
+
+    text-align: center;
+}
+
+
+.confirm-icon {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    background: #fff0f5;
+
+    color: #d35d86;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+.confirm-box > span {
+    color: #c4577c;
+
+    font-size: 7px;
+
+    letter-spacing: 1.2px;
+
+    font-weight: 700;
+}
+
+
+.confirm-box h2 {
+    font-size: 17px;
+
+    margin-top: 5px;
+}
+
+
+.confirm-box > p {
+    color: #999;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    margin: 6px 0 17px;
+}
+
+
+.confirm-data {
+    background: #fafafa;
+
+    border-radius: 10px;
+
+    padding: 5px 12px;
+
+    text-align: left;
+}
+
+
+.confirm-data > div {
+    min-height: 34px;
+
+    border-bottom:
+        1px solid #eee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.confirm-data > div:last-child {
+    border-bottom: none;
+}
+
+
+.confirm-data span {
+    color: #999;
+
+    font-size: 8px;
+}
+
+
+.confirm-data strong {
+    font-size: 8px;
+
+    text-align: right;
+
+    max-width: 60%;
+}
+
+
+.confirm-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 17px;
+}
+
+
+.confirm-buttons button {
+    height: 40px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+#backConfirm {
+    background: #f0f0f0;
+
+    color: #555;
+}
+
+
+#saveConfirm {
+    background: #d35d86;
+
+    color: white;
+}
+
+
+/* =========================================================
+   HP
+
+   SANGAT SEDIKIT ATURAN.
+
+   TIDAK MENGUBAH DESAIN.
+
+   Hanya memastikan halaman bisa digeser horizontal.
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .app {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        background: #ffffff;
+    }
+
+}
